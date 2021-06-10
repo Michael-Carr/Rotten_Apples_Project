@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Hub Wold</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-danger">
+        <div class="container-fluid">
+            <span class="text-white ">User: {{request.session.user_name}}</span>
+            <span class="navbar-brand mb-0 h1 text-white">Rotten Apples Hub</span>
+
+            <a href="/logout" class="text-white">Logout</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <table class="table table-light table-hover">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Platforms</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for game in games %}
+                <tr>
+                    <td><a href="/{{ game.id }}">{{game.title}}</a></td>
+                    <td>{{ game.platform }}</td>
+                    <td>{{ game.release_date|date:"SHORT_DATE_FORMAT" }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+<div class="container ">  <a href="/addgame" class="container btn-danger p-1 ">Add Game</a>
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

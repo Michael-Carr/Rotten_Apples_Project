@@ -1,0 +1,79 @@
+body {
+    background-color: dimgrey;
+    background-image:url(arcade.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}
+
+.navbar-brand{
+    font-family: "Lucida Console";
+    display: flex;
+    justify-content:center;
+    
+}
+.formlabel{
+    font-weight: bolder;
+}
+
+.review_post{
+    background-color: rgb(145, 146, 146);
+    min-height: 40px;
+    font-weight: bold;
+    border-color: rgb(216, 31, 31);
+    border-style: outset;
+    padding-left: 5px;
+}
+.post{
+    border:.75rem;
+    border-color: firebrick;
+    border-style: inset;
+}
+
+.post_text{
+    color: rgb(255, 255, 255);
+    background-color: firebrick;
+    padding: 5px;
+    border-radius: 5px;
+}
+.game_image{
+    max-width: 50%;
+    max-height: 50%;
+    min-width: 25%;
+    min-height: 25%;
+}
+
+.login_reg{
+    color: honeydew;
+    background-color: rgba(2, 2, 2, 0.678);
+    padding: 5px;
+    border: honeydew;
+    border-style: outset;
+}
+.login_reg_text{
+    color: honeydew;
+    font-size: 25px;
+    font-family: monospace;
+    background-color: rgba(2, 2, 2, 0.678);
+}
+
+.add_game_text{
+    padding: 4px;
+    color: honeydew;
+    font-family: monospace;
+    background-color: rgba(36, 92, 30, 0.678);
+}
+
+.add_game_form{
+    padding: 4px;
+    color: honeydew;
+    font-family: monospace;
+    background-color: rgba(36, 92, 30, 0.678);
+}
+.edit_game_form{
+    padding: 4px;
+    color: honeydew;
+    font-family: monospace;
+    background-color: rgba(88, 92, 30, 0.678);
+}
